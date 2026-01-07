@@ -18,13 +18,11 @@
       .font-orbitron { font-family: 'Orbitron', sans-serif; }
       .font-mono { font-family: 'JetBrains Mono', monospace; }
       
-      /* Refined Dot Grid Pattern from Image */
       .dot-grid {
         background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0);
         background-size: 32px 32px;
       }
 
-      /* High-impact text glow - intensified to match reference */
       .headline-glow {
         text-shadow: 
           0 0 10px rgba(255, 255, 255, 0.4),
@@ -61,21 +59,30 @@
         animation: float 6s ease-in-out infinite;
       }
     </style>
-  <script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@19.0.0",
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "lucide-react": "https://esm.sh/lucide-react@0.462.0?external=react",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.0"
   }
 }
 </script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
+    <script type="module">
+      // Simple error tracking to help debug blank screens
+      window.onerror = function(message, source, lineno, colno, error) {
+        console.error("Global Error Caught: ", message, " at ", source, ":", lineno);
+        return false;
+      };
+    </script>
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>
