@@ -1,9 +1,9 @@
 
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import DashboardMockup from './components/DashboardMockup';
-import GridBackground from './components/GridBackground';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import DashboardMockup from './components/DashboardMockup.tsx';
+import GridBackground from './components/GridBackground.tsx';
 import { Layers, Zap, Shield, MousePointer2, Globe, Code } from 'lucide-react';
 
 const App: React.FC = () => {
